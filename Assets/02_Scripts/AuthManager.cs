@@ -19,7 +19,10 @@ public class AuthManager : MonoBehaviour
 {
     [SerializeField] private Button signInButton;
     [SerializeField] private Button signOutButton;
+    [SerializeField] private Button playerNameSaveButton;
+
     [SerializeField] private TMP_Text messageText;
+    [SerializeField] private TMP_InputField playerNameIf;
 
     private async void Awake()
     {
@@ -42,7 +45,7 @@ public class AuthManager : MonoBehaviour
             AuthenticationService.Instance.SignOut();
         });
 
-        await Test();
+        //await Test();
     }
 
     // 인증관련 이벤트 연결
