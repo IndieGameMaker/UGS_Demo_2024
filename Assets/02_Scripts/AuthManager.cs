@@ -25,6 +25,18 @@ public class AuthManager : MonoBehaviour
         signInButton.onClick.AddListener(async () => await SignInAsync());
     }
 
+    // 인증관련 이벤트 연결
+    private void BindingEvents()
+    {
+        // 로그인 성공
+        AuthenticationService.Instance.SignedIn += () =>
+        {
+            Debug.Log("로그인 성공");
+            messageText.text += $"Player Id: {AuthenticationService.Instance.PlayerId}\n";
+        };
+    }
+
+
     // 익명 로그인 메소드
     private async Task SignInAsync()
     {
