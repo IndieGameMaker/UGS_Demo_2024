@@ -73,8 +73,8 @@ public class CloudSaveManager : MonoBehaviour
         // 저장할 데이터를 정의
         var data = new Dictionary<string, object>
         {
-            {"player_name", "Zackiller"},
-            {"level", 30},
+            {"player_name", "Zack"},
+            {"level", 50},
             {"xp", 2000},
             {"gold", 100}
         };
@@ -95,6 +95,9 @@ public class CloudSaveManager : MonoBehaviour
 
         await CloudSaveService.Instance.Data.Player.SaveAsync(data);
         Debug.Log("복수 데이터 저장 완료");
+
+        // PlayerData 스트럭쳐 초기화
+        playerData = new PlayerData();
     }
     #endregion
 
