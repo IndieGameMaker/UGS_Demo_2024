@@ -3,6 +3,8 @@ using UnityEngine;
 using UnityEngine.UI;
 using Unity.Services.Core;
 using Unity.Services.Authentication.PlayerAccounts;
+using System;
+using Unity.Services.Authentication;
 
 namespace UnityAccount
 {
@@ -18,6 +20,17 @@ namespace UnityAccount
         async void Awake()
         {
             await UnityServices.InitializeAsync();
+
+            PlayerAccountService.Instance.SignedIn += OnSignedIn;
+        }
+
+        private async void OnSignedIn()
+        {
+            // 엑세스 토큰 할당(추출)
+            string accessToken = PlayerAccountService.Instance.AccessToken;
+            // 비동기 방식으로 로그인처리
+            await AuthenticationService.Instance.SignInWithUnityAsync(accessToken);
+            Debug.Log("로그인 성공");
         }
 
         void OnEnable()
@@ -27,5 +40,7 @@ namespace UnityAccount
                 await PlayerAccountService.Instance.StartSignInAsync();
             });
         }
+
+
     }
 }
