@@ -78,4 +78,17 @@ public class CloudSaveManager : MonoBehaviour
         Debug.Log("데이터 저장 완료");
     }
     #endregion
+
+    #region 복수데이터 저장
+    public async Task SaveMultiDataAsync<T>(string key, T saveData)
+    {
+        var data = new Dictionary<string, object>
+        {
+            {key, saveData}
+        };
+
+        await CloudSaveService.Instance.Data.Player.SaveAsync(data);
+        Debug.Log("복수 데이터 저장 완료");
+    }
+    #endregion
 }
