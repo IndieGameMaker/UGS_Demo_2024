@@ -31,7 +31,9 @@ public class CloudSaveManager : MonoBehaviour
 {
     [Header("UI")]
     [SerializeField] private Button singleDataSaveButton;
+    [SerializeField] private Button singleDataLoadButton;
     [SerializeField] private Button multiDataSaveButton;
+    [SerializeField] private Button multiDataLoadButton;
 
     [Header("Player Data")]
     [SerializeField] private PlayerData playerData;
@@ -61,6 +63,8 @@ public class CloudSaveManager : MonoBehaviour
     {
         singleDataSaveButton.onClick.AddListener(async () => await SaveSingleDataAsync());
         multiDataSaveButton.onClick.AddListener(async () => await SaveMultiDataAsync<PlayerData>("PlayerData", playerData));
+
+        singleDataLoadButton.onClick.AddListener(async () => await LoadData());
     }
 
     #region 싱글데이터 저장
