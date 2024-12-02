@@ -31,7 +31,25 @@ namespace UserNamePassword
             회원 이름 : 3 ~ 20자, 대소문자 구별없슴, [. - @]
             비밀 번호 : 8 ~ 30자, 대소문자 구별함, 영문자 대문자1, 소문자1, 숫자1, 특수문자1
         */
+        // 로그인
+        async Task SignIn(string userName, string password)
+        {
+            try
+            {
+                await Auth.Instance.SignInWithUsernamePasswordAsync(userName, password);
+                Debug.Log("로그인 완료");
+            }
+            catch (AuthenticationException e)
+            {
+                Debug.Log(e.Message);
+            }
+            catch (RequestFailedException e)
+            {
+                Debug.Log(e.Message);
+            }
+        }
 
+        // 회원가입
         async Task SignUp(string userName, string password)
         {
             try
