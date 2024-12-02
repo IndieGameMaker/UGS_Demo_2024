@@ -60,6 +60,7 @@ public class CloudSaveManager : MonoBehaviour
     private void BindingEvents()
     {
         singleDataSaveButton.onClick.AddListener(async () => await SaveSingleDataAsync());
+        multiDataSaveButton.onClick.AddListener(async () => await SaveMultiDataAsync<PlayerData>("PlayerData", playerData));
     }
 
     #region 싱글데이터 저장
