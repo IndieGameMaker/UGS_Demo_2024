@@ -135,4 +135,9 @@ public class CloudSaveManager : MonoBehaviour
     }
 
     #endregion
+
+    public async Task<T> LoadData<T>(string key)
+    {
+        var loadData = await CloudSaveService.Instance.Data.Player.LoadAsync(new HashSet<string> { key });
+    }
 }
