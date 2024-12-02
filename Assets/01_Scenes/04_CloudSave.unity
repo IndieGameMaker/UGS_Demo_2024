@@ -1258,12 +1258,12 @@ MonoBehaviour:
   singleDataSaveButton: {fileID: 818555226}
   singleDataLoadButton: {fileID: 2140315249}
   multiDataSaveButton: {fileID: 1134244069}
-  multiDataLoadButton: {fileID: 0}
+  multiDataLoadButton: {fileID: 491129056}
   playerData:
-    name: Zackiller
-    level: 10
-    xp: 1000
-    gold: 300
+    name: Jason
+    level: 20
+    xp: 3000
+    gold: 100
     items:
     - name: Healer Posion
       count: 2
