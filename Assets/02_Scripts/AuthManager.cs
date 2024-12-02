@@ -91,11 +91,20 @@ public class AuthManager : MonoBehaviour
 
             string _playerName = AuthenticationService.Instance.PlayerName;
             Debug.Log($"Player Name : {_playerName} 변경완료");
+
+            _playerName = await GetPlayerNameAsync();
+            messageText.text += $"Player Name : {_playerName}\n";
         }
         catch (AuthenticationException e)
         {
             Debug.Log(e.Message);
         }
+    }
+
+    // 플레이어 이름 추출
+    private async Task<string> GetPlayerNameAsync()
+    {
+        return await AuthenticationService.Instance.GetPlayerNameAsync();
     }
 
     // 익명 로그인 메소드
