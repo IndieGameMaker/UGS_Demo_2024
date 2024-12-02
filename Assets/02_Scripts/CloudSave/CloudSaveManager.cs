@@ -139,5 +139,8 @@ public class CloudSaveManager : MonoBehaviour
     public async Task<T> LoadData<T>(string key)
     {
         var loadData = await CloudSaveService.Instance.Data.Player.LoadAsync(new HashSet<string> { key });
+        loadData.TryGetValue(key, out var data);
+
+        return data.Value.GetAs<T>();
     }
 }
