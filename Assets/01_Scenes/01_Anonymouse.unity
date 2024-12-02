@@ -485,6 +485,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   signInButton: {fileID: 1273035769}
+  signOutButton: {fileID: 1373790392}
   messageText: {fileID: 1704759154}
 --- !u!4 &582032525
 Transform:
