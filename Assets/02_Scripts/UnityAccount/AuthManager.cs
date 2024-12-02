@@ -22,7 +22,7 @@ namespace UnityAccount
             await UnityServices.InitializeAsync();
 
             PlayerAccountService.Instance.SignedIn += OnSignedIn;
-
+            PlayerAccountService.Instance.SignedOut += () => Debug.Log("로그아웃");
         }
 
         private async void OnSignedIn()
