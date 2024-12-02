@@ -4,6 +4,16 @@ using UnityEngine.UI;
 using Unity.Services.Core;
 using System.Threading.Tasks;
 using Unity.Services.Authentication;
+using System.Collections;
+
+/*
+사용자 이름
+
+- 50 자
+- 중간에 공백 X
+- "Zack"  => "Zack#1234"
+*/
+
 
 public class AuthManager : MonoBehaviour
 {
@@ -31,6 +41,8 @@ public class AuthManager : MonoBehaviour
             // 로그아웃 요청
             AuthenticationService.Instance.SignOut();
         });
+
+        await Test();
     }
 
     // 인증관련 이벤트 연결
@@ -76,4 +88,17 @@ public class AuthManager : MonoBehaviour
             Debug.Log(e.Message);
         }
     }
+
+
+    // private async Task Test()
+    // {
+    //     await Task.Delay(10000);
+    //     Debug.Log("10초 지남");
+    // }
+
+    // private IEnumerator Test2()
+    // {
+    //     yield return new WaitForSeconds(10.0f);
+    //     Debug.Log("10초 지남");
+    // }
 }
