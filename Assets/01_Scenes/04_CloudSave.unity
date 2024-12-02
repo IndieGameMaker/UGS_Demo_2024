@@ -605,6 +605,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3b59b529f45f486e91f5d29ff74f5af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  singleDataSaveButton: {fileID: 818555226}
 --- !u!4 &1728338005
 Transform:
   m_ObjectHideFlags: 0

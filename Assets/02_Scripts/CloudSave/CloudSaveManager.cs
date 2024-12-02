@@ -13,10 +13,14 @@ public class CloudSaveManager : MonoBehaviour
 
     async void Awake()
     {
+        singleDataSaveButton.interactable = false;
+
         await UnityServices.InitializeAsync();
 
         AuthenticationService.Instance.SignedIn += () =>
         {
+            singleDataSaveButton.interactable = true;
+
             string playerId = AuthenticationService.Instance.PlayerId;
             Debug.Log($"로그인 성공 : {playerId}");
         };
