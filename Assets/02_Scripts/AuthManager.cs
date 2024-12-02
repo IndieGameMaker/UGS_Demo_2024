@@ -93,7 +93,7 @@ public class AuthManager : MonoBehaviour
             Debug.Log($"Player Name : {_playerName} 변경완료");
 
             _playerName = await GetPlayerNameAsync();
-            messageText.text += $"Player Name : {_playerName}\n";
+            messageText.text += $"Player Name : {_playerName.Split('#')[0]}\n";
         }
         catch (AuthenticationException e)
         {
