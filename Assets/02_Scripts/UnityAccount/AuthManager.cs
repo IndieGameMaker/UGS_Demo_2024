@@ -14,5 +14,18 @@ namespace UnityAccount
 
         [SerializeField] private TMP_InputField playerNameIf;
         [SerializeField] private TMP_Text messageText;
+
+        async void Awake()
+        {
+            await UnityServices.InitializeAsync();
+        }
+
+        void OnEnable()
+        {
+            signInButton.onClick.AddListener(async () =>
+            {
+                await PlayerAccountService.Instance.StartSignInAsync();
+            });
+        }
     }
 }
