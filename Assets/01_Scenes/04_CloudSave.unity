@@ -606,6 +606,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   singleDataSaveButton: {fileID: 818555226}
+  playerData:
+    name: Zackiller
+    level: 10
+    xp: 1000
+    gold: 300
+    items:
+    - name: Healer Posion
+      count: 2
+      value: 20
+      icon: Sprite/Healer.png
+    - name: Mana Posion
+      count: 3
+      value: 10
+      icon: Sprite/Mana.png
+    - name: Stemina
+      count: 1
+      value: 30
+      icon: Sprite/Stemina.png
 --- !u!4 &1728338005
 Transform:
   m_ObjectHideFlags: 0
