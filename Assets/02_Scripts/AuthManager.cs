@@ -50,6 +50,9 @@ public class AuthManager : MonoBehaviour
         {
             await SetPlayerNameAsync(playerNameIf.text);
         });
+
+        var _playerName = await GetPlayerNameAsync();
+        messageText.text += $"Player Name : {_playerName.Split('#')[0]}\n";
     }
 
     // 인증관련 이벤트 연결
