@@ -78,6 +78,19 @@ public class AuthManager : MonoBehaviour
         };
     }
 
+    // 이름 저장 메소드
+    private async Task SetPlayerNameAsync(string playerName)
+    {
+        try
+        {
+            await AuthenticationService.Instance.UpdatePlayerNameAsync(playerName);
+            Debug.Log("Player Name 변경완료");
+        }
+        catch (AuthenticationException e)
+        {
+
+        }
+    }
 
     // 익명 로그인 메소드
     private async Task SignInAsync()
