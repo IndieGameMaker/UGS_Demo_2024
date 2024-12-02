@@ -25,6 +25,11 @@ namespace UserNamePassword
             {
                 await SignUp(userNameIf.text, passwordIf.text);
             });
+            // 로그인 버튼 이벤트 연결
+            signInButton.onClick.AddListener(async () =>
+            {
+                await SignIn(userNameIf.text, passwordIf.text);
+            });
         }
 
         /*
