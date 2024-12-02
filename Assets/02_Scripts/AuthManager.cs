@@ -8,6 +8,7 @@ using Unity.Services.Authentication;
 public class AuthManager : MonoBehaviour
 {
     [SerializeField] private Button signInButton;
+    [SerializeField] private Button signOutButton;
     [SerializeField] private TMP_Text messageText;
 
     private async void Awake()
@@ -25,6 +26,11 @@ public class AuthManager : MonoBehaviour
 
         // 버튼 이벤트 연결
         signInButton.onClick.AddListener(async () => await SignInAsync());
+        signOutButton.onClick.AddListener(() =>
+        {
+            // 로그아웃 요청
+            AuthenticationService.Instance.SignOut();
+        });
     }
 
     // 인증관련 이벤트 연결
@@ -35,6 +41,25 @@ public class AuthManager : MonoBehaviour
         {
             Debug.Log("로그인 성공");
             messageText.text += $"Player Id: {AuthenticationService.Instance.PlayerId}\n";
+        };
+
+        // 로그아웃
+        AuthenticationService.Instance.SignedOut += () =>
+        {
+            Debug.Log("로그 아웃");
+            messageText.text = "";
+        };
+
+        // 로그인 실패
+        AuthenticationService.Instance.SignInFailed += (ex) =>
+        {
+            Debug.Log(ex.Message);
+            messageText.text += $"Login Failed : {ex.Message}\n";
+        };
+        // 세션 종료
+        AuthenticationService.Instance.Expired += () =>
+        {
+            Debug.Log("세션 종료됨!");
         };
     }
 
