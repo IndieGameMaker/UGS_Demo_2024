@@ -16,6 +16,7 @@ namespace UserNamePassword
         private async void Awake()
         {
             await UnityServices.InitializeAsync();
+            Auth.Instance.SignedIn += () => Debug.Log("로그인 완료");
         }
 
         private void OnEnable()
@@ -30,8 +31,6 @@ namespace UserNamePassword
             {
                 await SignIn(userNameIf.text, passwordIf.text);
             });
-
-            Auth.Instance.SignedIn += () => Debug.Log("로그인 완료");
         }
 
         /*
