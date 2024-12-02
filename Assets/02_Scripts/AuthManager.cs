@@ -20,6 +20,8 @@ public class AuthManager : MonoBehaviour
 
         // UGS 초기화
         await UnityServices.InitializeAsync();
+        // 이벤트 바인딩
+        BindingEvents();
 
         // 버튼 이벤트 연결
         signInButton.onClick.AddListener(async () => await SignInAsync());
@@ -43,7 +45,6 @@ public class AuthManager : MonoBehaviour
         try
         {
             await AuthenticationService.Instance.SignInAnonymouslyAsync();
-            Debug.Log("익명 로그인 성공");
         }
         catch (AuthenticationException e)
         {
