@@ -22,6 +22,7 @@ namespace UnityAccount
             await UnityServices.InitializeAsync();
 
             PlayerAccountService.Instance.SignedIn += OnSignedIn;
+
         }
 
         private async void OnSignedIn()
@@ -35,9 +36,16 @@ namespace UnityAccount
 
         void OnEnable()
         {
+            // 로그인
             signInButton.onClick.AddListener(async () =>
             {
                 await PlayerAccountService.Instance.StartSignInAsync();
+            });
+
+            // 로그아웃
+            signOutButton.onClick.AddListener(() =>
+            {
+                PlayerAccountService.Instance.SignOut();
             });
         }
 
