@@ -30,6 +30,8 @@ namespace UserNamePassword
             {
                 await SignIn(userNameIf.text, passwordIf.text);
             });
+
+            Auth.Instance.SignedIn += () => Debug.Log("로그인 완료");
         }
 
         /*
@@ -42,7 +44,6 @@ namespace UserNamePassword
             try
             {
                 await Auth.Instance.SignInWithUsernamePasswordAsync(userName, password);
-                Debug.Log("로그인 완료");
             }
             catch (AuthenticationException e)
             {
