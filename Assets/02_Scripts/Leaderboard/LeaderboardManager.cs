@@ -20,6 +20,13 @@ public class LeaderboardManager : MonoBehaviour
     private async void Awake()
     {
         await UnityServices.InitializeAsync();
+
+        AuthenticationService.Instance.SignedIn += () =>
+        {
+            var playerId = AuthenticationService.Instance.PlayerId;
+            Debug.Log($"로그인 : {playerId}");
+        };
+
         await AuthenticationService.Instance.SignInAnonymouslyAsync();
 
         scoreSaveButton.onClick.AddListener(async () =>
