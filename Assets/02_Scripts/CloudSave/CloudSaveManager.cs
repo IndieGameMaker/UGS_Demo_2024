@@ -77,6 +77,7 @@ public class CloudSaveManager : MonoBehaviour
         });
 
         fileUploadButton.onClick.AddListener(async () => await FileUpload());
+        fileDownloadButton.onClick.AddListener(async () => await FileDownload());
     }
 
     // 파일 업로드
