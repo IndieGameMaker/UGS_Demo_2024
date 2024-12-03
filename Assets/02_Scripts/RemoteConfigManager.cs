@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class RemoteConfigManager : MonoBehaviour
 {
+    [SerializeField] private float moveSpeed;
+    [SerializeField] private float turnSpeed;
+    [SerializeField] private int scale;
+
     private async void Awake()
     {
         await UnityServices.InitializeAsync();
