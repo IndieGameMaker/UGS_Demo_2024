@@ -92,6 +92,7 @@ public class CloudSaveManager : MonoBehaviour
             byte[] file = System.IO.File.ReadAllBytes(CAPTURE_IMG);
             // 파일 업로드
             await CloudSaveService.Instance.Files.Player.SaveAsync(CAPTURE_IMG, file);
+            Debug.Log("파일 업로드 완료");
         }
         catch (Exception e)
         {
