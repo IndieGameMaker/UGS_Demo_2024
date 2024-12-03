@@ -34,6 +34,7 @@ public class LeaderboardManager : MonoBehaviour
             int score = int.Parse(scoreIf.text);
             await AddScore(score);
             await GetAllScores();
+            await GetScoresByPage();
 
             // 유저 삭제
             await AuthenticationService.Instance.DeleteAccountAsync();
@@ -66,5 +67,18 @@ public class LeaderboardManager : MonoBehaviour
             rank += $"[{entry.Rank + 1}] {entry.PlayerName} / {entry.Score}\n";
         }
         Debug.Log(rank);
+    }
+
+    private async Task GetScoresByPage()
+    {
+        // Score Option
+        var so = new GetScoresOptions
+        {
+            Offset = 2,
+            Limit = 5
+        };// 2+1 번 순위 부터 5개 순위를 추출
+
+        var response = await LeaderboardsService.Instance.GetScoresAsync(LEADERBOARD_ID, so);
+        Debug.Log(JsonConvert.SerializeObject(response));
     }
 }
