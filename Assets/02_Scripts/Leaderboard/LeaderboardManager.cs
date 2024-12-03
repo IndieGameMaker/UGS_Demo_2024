@@ -56,7 +56,7 @@ public class LeaderboardManager : MonoBehaviour
     public async Task GetAllScores()
     {
         var response = await LeaderboardsService.Instance.GetScoresAsync(LEADERBOARD_ID);
-        Debug.Log($"Json : {JsonConvert.SerializeObject(response)}");
+        //Debug.Log($"Json : {JsonConvert.SerializeObject(response)}");
 
         entries = response.Results;
 
