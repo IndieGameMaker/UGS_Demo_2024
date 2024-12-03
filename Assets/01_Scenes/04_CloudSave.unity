@@ -1845,6 +1845,9 @@ MonoBehaviour:
   singleDataLoadButton: {fileID: 2140315249}
   multiDataSaveButton: {fileID: 1134244069}
   multiDataLoadButton: {fileID: 491129056}
+  fileUploadButton: {fileID: 55704736}
+  fileDownloadButton: {fileID: 363536923}
+  downloadImage: {fileID: 1559900908}
   playerData:
     name: Jason
     level: 20
@@ -2103,13 +2106,13 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1559900907}
   - {fileID: 818555225}
   - {fileID: 2140315248}
   - {fileID: 1134244068}
   - {fileID: 491129055}
   - {fileID: 55704735}
   - {fileID: 363536922}
+  - {fileID: 1559900907}
   m_Father: {fileID: 7295471276180930366}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.6475001, y: 0}
