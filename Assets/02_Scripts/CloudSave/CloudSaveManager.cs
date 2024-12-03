@@ -145,6 +145,11 @@ public class CloudSaveManager : MonoBehaviour
         var loadData = await CloudSaveService.Instance.Data.Player.LoadAsync(new HashSet<string> { key });
         loadData.TryGetValue(key, out var data);
 
+        // Json 파일 추출
+        string jsonStr = JsonUtility.ToJson(data.Value.GetAs<T>());
+        Debug.Log(jsonStr);
+
+
         return data.Value.GetAs<T>();
     }
 }
