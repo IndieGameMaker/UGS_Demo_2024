@@ -1,9 +1,11 @@
+using System.Collections.Generic;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
 using TMPro;
 using Unity.Services.Authentication;
 using Unity.Services.Core;
 using Unity.Services.Leaderboards;
+using Unity.Services.Leaderboards.Models;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
@@ -33,5 +35,23 @@ public class LeaderboardManager : MonoBehaviour
         var response = await LeaderboardsService.Instance.AddPlayerScoreAsync(LEADERBOARD_ID, score);
         var result = JsonConvert.SerializeObject(response);
         Debug.Log(result);
+    }
+
+    // 모든 점수 불러오기
+    public List<LeaderboardEntry> entries = new List<LeaderboardEntry>();
+
+    public async Task GetAllScores()
+    {
+        var response = await LeaderboardsService.Instance.GetScoresAsync(LEADERBOARD_ID);
+        Debug.Log($"Json : {JsonConvert.SerializeObject(response)}");
+
+        entries = response.Results;
+
+        string rank = "";
+        foreach (var entry in entries)
+        {
+            rank += $"[{entry.Rank + 1}] {entry.PlayerName}\n";
+        }
+        Debug.Log(rank);
     }
 }
