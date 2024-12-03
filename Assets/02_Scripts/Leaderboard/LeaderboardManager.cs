@@ -63,7 +63,7 @@ public class LeaderboardManager : MonoBehaviour
         string rank = "";
         foreach (var entry in entries)
         {
-            rank += $"[{entry.Rank + 1}] {entry.PlayerName}\n";
+            rank += $"[{entry.Rank + 1}] {entry.PlayerName} / {entry.Score}\n";
         }
         Debug.Log(rank);
     }
