@@ -26,6 +26,12 @@ public class LeaderboardManager : MonoBehaviour
         {
             int score = int.Parse(scoreIf.text);
             await AddScore(score);
+            await GetAllScores();
+
+            // 유저 삭제
+            await AuthenticationService.Instance.DeleteAccountAsync();
+            // 로그인
+            await AuthenticationService.Instance.SignInAnonymouslyAsync();
         });
     }
 
