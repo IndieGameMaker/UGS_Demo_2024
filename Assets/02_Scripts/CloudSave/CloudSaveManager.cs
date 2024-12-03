@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using Unity.Services.Authentication;
 using Unity.Services.CloudSave;
+using Unity.Services.CloudSave.Models;
 using Unity.Services.Core;
 using UnityEngine;
 using UnityEngine.UI;
@@ -98,6 +99,24 @@ public class CloudSaveManager : MonoBehaviour
         {
             Debug.Log(e.Message);
         }
+    }
+
+    private async Task FileDownload()
+    {
+        // 파일 목록
+        List<FileItem> files = await CloudSaveService.Instance.Files.Player.ListAllAsync();
+        for (int i = 0; i < files.Count; i++)
+        {
+            Debug.Log(files[i].Key);
+        }
+
+        // 특정 파일 다운로드
+        byte[] file = await CloudSaveService.Instance.Files.Player.LoadBytesAsync(CAPTURE_IMG);
+        // byte => Texture 변환
+        Texture2D texture = new Texture2D(2, 2);
+        texture.LoadImage(file);
+
+        downloadImage.texture = texture;
     }
 
 
