@@ -13,7 +13,7 @@ public class LeaderboardManager : MonoBehaviour
     [SerializeField] private TMP_InputField scoreIf;
     [SerializeField] private Button scoreSaveButton;
 
-    private const string LEADERBOARD_ID = "TopRank";
+    private const string LEADERBOARD_ID = "Ranking";
 
     private async void Awake()
     {

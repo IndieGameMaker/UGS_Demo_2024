@@ -440,6 +440,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1fa1a476a8e3743e8bf9d255f7b6ad55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scoreIf: {fileID: 9220392408975166578}
+  scoreSaveButton: {fileID: 5546338223757403868}
 --- !u!4 &1990740967
 Transform:
   m_ObjectHideFlags: 0
@@ -1498,14 +1500,14 @@ MonoBehaviour:
   m_VerticalScrollbarEventHandler: {fileID: 0}
   m_LayoutGroup: {fileID: 0}
   m_ScrollSensitivity: 1
-  m_ContentType: 0
+  m_ContentType: 2
   m_InputType: 0
   m_AsteriskChar: 42
-  m_KeyboardType: 0
+  m_KeyboardType: 4
   m_LineType: 0
   m_HideMobileInput: 0
   m_HideSoftKeyboard: 0
-  m_CharacterValidation: 0
+  m_CharacterValidation: 2
   m_RegexValue: 
   m_GlobalPointSize: 14
   m_CharacterLimit: 0
