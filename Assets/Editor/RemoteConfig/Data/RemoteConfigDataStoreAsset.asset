@@ -12,19 +12,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 469c24fdb3bd6431b92cc1465bd9166b, type: 3}
   m_Name: RemoteConfigDataStoreAsset
   m_EditorClassIdentifier: 
-  _rsKeyList: "[\n  {\n    \"metadata\": {\n      \"entityId\": \"1a0b2f3f-62c9-4c06-8a5e-1b7ea6b2eef9\"\n   
+  _rsKeyList: "[\n  {\n    \"metadata\": {\n      \"entityId\": \"1166fee5-6cee-4143-b7bf-a72df866432e\"\n   
     },\n    \"rs\": {\n      \"key\": \"move_speed\",\n      \"type\": \"float\",\n     
-    \"value\": 5.0\n    }\n  },\n  {\n    \"metadata\": {\n      \"entityId\": \"df27051d-5324-4908-9317-a3098e87c9b1\"\n   
+    \"value\": 5.0\n    }\n  },\n  {\n    \"metadata\": {\n      \"entityId\": \"6ce40cf1-8793-4ec3-add9-b252c00f97c0\"\n   
     },\n    \"rs\": {\n      \"key\": \"turn_speed\",\n      \"type\": \"float\",\n     
     \"value\": 100.0\n    }\n  },\n  {\n    \"metadata\": {\n      \"entityId\":
-    \"9a416ba7-6edf-458b-ab89-f9af23e33478\"\n    },\n    \"rs\": {\n      \"key\":
+    \"4b299d2c-b692-4b47-b61f-cae8343fdcfc\"\n    },\n    \"rs\": {\n      \"key\":
     \"scale\",\n      \"type\": \"int\",\n      \"value\": 1\n    }\n  }\n]"
-  _rsLastCachedKeyList: "[\n  {\n    \"metadata\": {\n      \"entityId\": \"1a0b2f3f-62c9-4c06-8a5e-1b7ea6b2eef9\"\n   
+  _rsLastCachedKeyList: "[\n  {\n    \"metadata\": {\n      \"entityId\": \"1166fee5-6cee-4143-b7bf-a72df866432e\"\n   
     },\n    \"rs\": {\n      \"key\": \"move_speed\",\n      \"type\": \"float\",\n     
-    \"value\": 5.0\n    }\n  },\n  {\n    \"metadata\": {\n      \"entityId\": \"df27051d-5324-4908-9317-a3098e87c9b1\"\n   
+    \"value\": 5.0\n    }\n  },\n  {\n    \"metadata\": {\n      \"entityId\": \"6ce40cf1-8793-4ec3-add9-b252c00f97c0\"\n   
     },\n    \"rs\": {\n      \"key\": \"turn_speed\",\n      \"type\": \"float\",\n     
     \"value\": 100.0\n    }\n  },\n  {\n    \"metadata\": {\n      \"entityId\":
-    \"9a416ba7-6edf-458b-ab89-f9af23e33478\"\n    },\n    \"rs\": {\n      \"key\":
+    \"4b299d2c-b692-4b47-b61f-cae8343fdcfc\"\n    },\n    \"rs\": {\n      \"key\":
     \"scale\",\n      \"type\": \"int\",\n      \"value\": 1\n    }\n  }\n]"
   _environments: "[\n  {\n    \"projectId\": \"7a54f91f-7ef1-41ee-ae32-6bd8c2f87acb\",\n   
     \"name\": \"production\",\n    \"id\": \"9e3f3460-c73d-4744-9731-e9342312bc06\",\n   
