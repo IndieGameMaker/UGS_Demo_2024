@@ -12,20 +12,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 469c24fdb3bd6431b92cc1465bd9166b, type: 3}
   m_Name: RemoteConfigDataStoreAsset
   m_EditorClassIdentifier: 
-  _rsKeyList: "[\n  {\n    \"metadata\": {\n      \"entityId\": \"1166fee5-6cee-4143-b7bf-a72df866432e\"\n   
+  _rsKeyList: "[\n  {\n    \"metadata\": {\n      \"entityId\": \"0ed9bdb3-e2b1-4f8b-8ad7-a1e744603552\"\n   
     },\n    \"rs\": {\n      \"key\": \"move_speed\",\n      \"type\": \"float\",\n     
-    \"value\": 5.0\n    }\n  },\n  {\n    \"metadata\": {\n      \"entityId\": \"6ce40cf1-8793-4ec3-add9-b252c00f97c0\"\n   
+    \"value\": 5.0\n    }\n  },\n  {\n    \"metadata\": {\n      \"entityId\": \"f58fbf02-54e9-4793-ab56-2ea012b41a82\"\n   
     },\n    \"rs\": {\n      \"key\": \"turn_speed\",\n      \"type\": \"float\",\n     
     \"value\": 100.0\n    }\n  },\n  {\n    \"metadata\": {\n      \"entityId\":
-    \"4b299d2c-b692-4b47-b61f-cae8343fdcfc\"\n    },\n    \"rs\": {\n      \"key\":
-    \"scale\",\n      \"type\": \"int\",\n      \"value\": 1\n    }\n  }\n]"
-  _rsLastCachedKeyList: "[\n  {\n    \"metadata\": {\n      \"entityId\": \"1166fee5-6cee-4143-b7bf-a72df866432e\"\n   
+    \"53c4d11f-91ea-49de-80a1-4d0301ad343b\"\n    },\n    \"rs\": {\n      \"key\":
+    \"scale\",\n      \"type\": \"int\",\n      \"value\": 3\n    }\n  }\n]"
+  _rsLastCachedKeyList: "[\n  {\n    \"metadata\": {\n      \"entityId\": \"0ed9bdb3-e2b1-4f8b-8ad7-a1e744603552\"\n   
     },\n    \"rs\": {\n      \"key\": \"move_speed\",\n      \"type\": \"float\",\n     
-    \"value\": 5.0\n    }\n  },\n  {\n    \"metadata\": {\n      \"entityId\": \"6ce40cf1-8793-4ec3-add9-b252c00f97c0\"\n   
+    \"value\": 5.0\n    }\n  },\n  {\n    \"metadata\": {\n      \"entityId\": \"f58fbf02-54e9-4793-ab56-2ea012b41a82\"\n   
     },\n    \"rs\": {\n      \"key\": \"turn_speed\",\n      \"type\": \"float\",\n     
     \"value\": 100.0\n    }\n  },\n  {\n    \"metadata\": {\n      \"entityId\":
-    \"4b299d2c-b692-4b47-b61f-cae8343fdcfc\"\n    },\n    \"rs\": {\n      \"key\":
-    \"scale\",\n      \"type\": \"int\",\n      \"value\": 1\n    }\n  }\n]"
+    \"53c4d11f-91ea-49de-80a1-4d0301ad343b\"\n    },\n    \"rs\": {\n      \"key\":
+    \"scale\",\n      \"type\": \"int\",\n      \"value\": 3\n    }\n  }\n]"
   _environments: "[\n  {\n    \"projectId\": \"7a54f91f-7ef1-41ee-ae32-6bd8c2f87acb\",\n   
     \"name\": \"production\",\n    \"id\": \"9e3f3460-c73d-4744-9731-e9342312bc06\",\n   
     \"isDefault\": true,\n    \"createdAt\": \"2024-12-02T00:31:28Z\",\n    \"updatedAt\":

@@ -14,6 +14,7 @@ public class LeaderboardManager : MonoBehaviour
 {
     [SerializeField] private TMP_InputField scoreIf;
     [SerializeField] private Button scoreSaveButton;
+    [SerializeField] private TMP_Text messageTxt;
 
     private const string LEADERBOARD_ID = "Ranking";
 
@@ -28,6 +29,7 @@ public class LeaderboardManager : MonoBehaviour
         };
 
         await AuthenticationService.Instance.SignInAnonymouslyAsync();
+        await GetAllScores();
 
         scoreSaveButton.onClick.AddListener(async () =>
         {
@@ -66,7 +68,8 @@ public class LeaderboardManager : MonoBehaviour
         {
             rank += $"[{entry.Rank + 1}] {entry.PlayerName} / {entry.Score}\n";
         }
-        Debug.Log(rank);
+
+        messageTxt.text = rank;
     }
 
     private async Task GetScoresByPage()
@@ -74,11 +77,21 @@ public class LeaderboardManager : MonoBehaviour
         // Score Option
         var so = new GetScoresOptions
         {
-            Offset = 2,
-            Limit = 5
+            Offset = 0,
+            Limit = 1
         };// 2+1 번 순위 부터 5개 순위를 추출
 
         var response = await LeaderboardsService.Instance.GetScoresAsync(LEADERBOARD_ID, so);
+        //await LeaderboardsService.Instance.GetScoresByTierAsync(LEADERBOARD_ID, "gold", new GetScoresByTierOptions { Limit = 0, Offset = 1 });
         Debug.Log(JsonConvert.SerializeObject(response));
+    }
+
+    private async Task GetScoreByRank()
+    {
+        var so = new GetPlayerRangeOptions
+        {
+
+        };
+        await LeaderboardsService.Instance.GetPlayerRangeAsync(LEADERBOARD_ID)
     }
 }
